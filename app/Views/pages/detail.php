@@ -17,7 +17,7 @@
                         <p class="card-text"><strong>Harga: </strong><?= $produk['harga']; ?></p>
                         <button class="btn btn-primary">Update</button>
                         <button class="btn btn-danger">Delete</button></br></br>
-                        <button class="btn"><a href="/pages/housePaint">Back</a></button>
+                        <button class="btn btnPointer"><a href="/pages/housePaint"><strong><</strong></a></button>
                     </div>
                 </div>
             </div>

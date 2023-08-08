@@ -7,7 +7,9 @@
         <div class="row d-flex justify-content-center">
             <?php foreach ($produk as $p) : ?>
                     <div class="card">
-                        <a href="/housePaint/<?= $p['id']; ?>" class="btnDetail" style="text-align:right"><button>></button></a>
+                        <div class="col"  style="text-align:right">
+                        <button class="btn btnPointer"> <a href="/housePaint/<?= $p['id']; ?>" class="btnDetail" style="text-align:right">></a></button>
+                        </div>
                         <img src="/assets/img/housePaint/<?= $p['produk']; ?>">
                         <div class="card-body">
                         <h4 class="mt-2"><?= $p['nama']; ?></h4>

@@ -207,3 +207,8 @@ th {
 .detail img {
   width: 250px;
 }
+
+.btnPointer {
+  border-radius: 25%;
+  border: 1px solid black;
+}
