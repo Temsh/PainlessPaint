@@ -71,7 +71,7 @@
                     <div class="col-md-3">
                         <img class="img-fluid" src="<?= base_url() ?>assets/img/profil/value4.png">
                         <h4><strong>Quality</strong></h4>
-                        <p>Tahan Lama, Tampil Menawan: Produk cat rumah waterproof exterior dan cat pelapis kayu yang berkualitas tinggi untuk tampilan yang menawan dan perlindungan yang tahan lama.</p>
+                        <p>Kreativitas Aman, Seni Berkualitas: Cat gambar berkualitas tinggi yang aman bagi anak-anak, membuka pintu kreativitas dan seni yang luar biasa.</p>
                         </p>
                     </div>
                 </div>

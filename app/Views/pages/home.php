@@ -66,7 +66,7 @@
             <h3><strong>Embrace your imagination with our 300++ color variants</strong></h3>
         </div>
         <div class="row d-flex justify-content-center text-center pt-3 colorCardHome">
-            <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorRed.png">
+            <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorRed.png">          
             <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorOrange.png">
             <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorYellow.png">
             <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorGreen.png">
@@ -80,7 +80,7 @@
     <div class="container-lg">
         <div class="row d-flex align-items-center">
             <div class="col-md-8">
-                <div class="row pt-5">
+                <div class="row pt-auto">
                     <h5><strong>Don't worry, our store has spread all over Indonesia</strong></h5>
                 </div>
                 <div class="row pt-2">

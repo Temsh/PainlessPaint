@@ -14,8 +14,8 @@
                         <div class="card-body">
                         <h4 class="mt-2"><?= $p['nama']; ?></h4>
                         <h5><?= $p['kegunaan']; ?> usage</h5>
-                        <h6>5 kg</h6>
-                        <h5 style="text-align:right"><strong>Rp.<?= $p['harga']; ?>/kg</strong></h5>
+                        <h6>5 Kg</h6>
+                        <h5 style="text-align:right"><strong>Rp.<?= $p['harga']; ?>/Kg</strong></h5>
                         </div>
                     </div>
                 
