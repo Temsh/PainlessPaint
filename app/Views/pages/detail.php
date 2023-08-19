@@ -7,7 +7,7 @@
         <div class="card mb-5" style="max-width:540px;">
             <div class="row no-gutters">
                 <div class="col-md-5">
-                    <img src="/assets/img/housePaint/<?= $produk['produk']; ?>">
+                    <img src="/assets/img/produk/<?= $produk['produk']; ?>">
                 </div>
                 <div class="col-md-7">
                     <div class="card-body">

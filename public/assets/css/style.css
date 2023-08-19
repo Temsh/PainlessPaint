@@ -94,33 +94,55 @@ p {
   font-size: 150px !important;
 }
 .colorCardHome img {
-  height: 100px;
-  width: 300px;
+  width: 180px;
   padding-bottom: 10px;
 }
+
 .colorCardHome :hover {
   transform: scale(1.1);
 }
 
+.colorCardHomeBorder {
+  border: 3px ridge black;
+  margin-bottom: 20px;
+}
 @media screen and (max-width: 635px) {
-  .produkHome :hover {
-    transform: scale(1.1);
-  }
   .homeProfil img {
     width: 200px;
   }
   .colorCardHome img {
     height: 100px;
-    width: 200px;
+    width: 175px;
     padding-bottom: 5px;
   }
   .colorCardHome :hover {
     transform: scale(1.1);
   }
+  .produkHome button {
+    width: 200px;
+    border: 2px solid black;
+  }
+  .produkHome img {
+    width: 200px;
+    border: 2px solid black;
+  }
+  .produkHome img:hover {
+    transform: scale(1.1);
+  }
+}
+
+.produkHome button {
+  width: 500px;
+  border: none;
+  background-color: transparent;
+}
+
+.produkHome img {
+  border: 2px solid black;
 }
 
 .produkHome :hover {
-  transform: scale(1.1);
+  transform: scale(1.01);
 }
 
 .factoryImg {
@@ -181,11 +203,6 @@ h5 {
   margin-right: auto;
 }
 
-.table td,
-th {
-  vertical-align: middle;
-}
-
 .housePaint .card {
   padding: 20px 20px 20px 20px;
   margin: 5px 5px 5px 5px;
@@ -211,4 +228,56 @@ th {
 .btnPointer {
   border-radius: 25%;
   border: 1px solid black;
+}
+
+.colorCard button {
+  border: 0px;
+  background-color: transparent;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.colorCard button img {
+  display: block;
+  padding-left: auto;
+  padding-right: auto;
+  width: 250px;
+}
+
+@media screen and (max-width: 635px) {
+  .colorCard button {
+    width: 180px;
+  }
+
+  .colorCard button img {
+    width: 180px;
+  }
+}
+.colorCard {
+  border: 0px;
+  background-color: transparent;
+}
+
+.colorCard button:hover {
+  transform: scale(1.1);
+}
+.colorShade {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  justify-content: center;
+  display: flex;
+}
+.shadeBtn {
+  width: 30px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
 }

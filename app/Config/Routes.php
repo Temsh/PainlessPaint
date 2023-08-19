@@ -41,6 +41,8 @@ $routes->get('/pages/guideline', 'Pages::guideline');
 $routes->get('/pages/profil', 'Pages::profil');
 $routes->get('/pages/toko', 'Pages::toko');
 $routes->get('/housePaint/(:segment)', 'Pages::detail/$1');
+$routes->get('/colorCard/detailWarna/(:segment)', 'Pages::detailWarna/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

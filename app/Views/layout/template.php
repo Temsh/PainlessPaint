@@ -34,11 +34,11 @@
                                 Produk
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/pages/housePaint">House Paint</a></li>
+                                <li><a id ="house" class="dropdown-item" href="/pages/housePaint">House Paint</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="/pages/drawingPaint">Drawing Paint</a></li>
+                                <li><a id ="drawing" class="dropdown-item" href="/pages/drawingPaint">Drawing Paint</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -193,6 +193,15 @@
                 navAll.classList.add("navbar-mini");
             }
         }
+
+        //IDSelector
+        const buttons = document.querySelectorAll('button[id]');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const categoryId = button.id;
+                window.location.href = `<?php echo site_url('/pages/housePaint'); ?>${categoryId}`;
+            });
+        });
     </script>
 </body>
 

@@ -51,11 +51,15 @@
             <h1><strong>Our Product</strong></h1>
         </div>
         <div class="row d-flex justify-content-center text-center pt-3 produkHome">
-            <div class="col-md-6 pb-3 text-center">
-                <a><img class="img-fluid" src="<?= base_url() ?>assets/img/home/produk1.png"></a>
+            <div class="col-md-6 pb-3 d-flex justify-content-center">
+                <button id="House">
+                    <img class="img-fluid" src="<?= base_url() ?>assets/img/home/produk1.png">
+                </button>
             </div>
-            <div class="col-md-6 text-center">
-                <a><img class="img-fluid" src="<?= base_url() ?>assets/img/home/produk2.png"></a>
+            <div class="col-md-6 pb-3 d-flex justify-content-center">
+                <button id="Drawing">
+                    <img class="img-fluid" src="<?= base_url() ?>assets/img/home/produk2.png">
+                </button>
             </div>
         </div>
     </div>
@@ -66,7 +70,7 @@
             <h3><strong>Embrace your imagination with our 300++ color variants</strong></h3>
         </div>
         <div class="row d-flex justify-content-center text-center pt-3 colorCardHome">
-            <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorRed.png">          
+            <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorRed.png">
             <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorOrange.png">
             <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorYellow.png">
             <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorGreen.png">
@@ -102,7 +106,7 @@
             <div class="col-md-8">
                 <h1><strong>Contact Us</strong></h1>
             </div>
-            <div class="col-md-2" >
+            <div class="col-md-2">
                 <a><span class="material-symbols-outlined emailIcon">
                         stacked_email
                     </span></a>

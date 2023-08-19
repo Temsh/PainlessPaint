@@ -3,12 +3,18 @@
 namespace App\Controllers;
 
 use App\Models\ProdukModel;
+use App\Models\ShadeModel;
+use App\Models\WarnaModel;
 
 class Pages extends BaseController
 {
     protected $produkModel;
+    protected $warnaModel;
+    protected $shadeModel;
     public function __construct(){
         $this->produkModel = new ProdukModel();
+        $this->warnaModel = new WarnaModel();
+        $this->shadeModel = new ShadeModel();
     }
     public function index()
     {
@@ -20,8 +26,10 @@ class Pages extends BaseController
     public function colorCard()
     {
         $data = [
-            'title' =>  'Colors Card | PainlessPaint'
+            'title' =>  'Color Card | PainlessPaint',
+            'warna'=> $this->warnaModel->getWarna()
         ];
+
         return view('pages/colorCard',$data);
     }
     public function colorPicker()
@@ -38,12 +46,12 @@ class Pages extends BaseController
         ];
         return view('pages/drawingPaint',$data);
     }
-    public function housePaint()
+    public function housePaint($categoryId)
     {
        // $produk = $this->produkModel->findAll();
         $data = [
-            'title' =>  'House Paint | PainlessPaint',
-            'produk'=> $this->produkModel->getProduk()
+            'title' => 'House Paint | PainlessPaint',
+            'produk'=> $this->produkModel-> getProdukById($categoryId)
         ];
        //$produkModel = new ProdukModel();
 
@@ -85,12 +93,22 @@ class Pages extends BaseController
         return view('pages/home',$data);
     }
     
-    public function detail($id){
+    public function detail($slug){
         
         $data = [
             'title' => 'Detail Produk',
-            'produk' => $this->produkModel->getProduk($id)
+            'produk' => $this->produkModel->getProduk($slug)
         ];
         return view('pages/detail', $data);
     }
+    public function detailWarna($categoryId)
+    {
+        $data = [
+            'title' => 'Warna',
+            'warnas'=> $this->shadeModel->getImgById($categoryId)
+        ];
+
+        return view('pages/detailWarna', $data);
+    }
+    
 }

@@ -5,12 +5,13 @@
 <section style="margin-top:75px;">
     <div class="container housePaint" style="background-color:white; padding:20px;">
         <div class="row d-flex justify-content-center">
+            <h2 class="text-center">House Paint</h2>
             <?php foreach ($produk as $p) : ?>
                     <div class="card">
                         <div class="col"  style="text-align:right">
-                        <button class="btn btnPointer"> <a href="/housePaint/<?= $p['id']; ?>" class="btnDetail" style="text-align:right">></a></button>
+                        <button class="btn btnPointer"> <a href="/housePaint/<?= $p['slug']; ?>" class="btnDetail" style="text-align:right">></a></button>
                         </div>
-                        <img src="/assets/img/housePaint/<?= $p['produk']; ?>">
+                        <img src="/assets/img/produk/<?= $p['produk']; ?>">
                         <div class="card-body">
                         <h4 class="mt-2"><?= $p['nama']; ?></h4>
                         <h5><?= $p['kegunaan']; ?> usage</h5>
