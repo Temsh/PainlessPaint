@@ -33,15 +33,20 @@ $routes->get('/', 'Pages::index');
 $routes->get('/pages', 'Pages::index');
 $routes->get('/pages/colorCard', 'Pages::colorCard');
 $routes->get('/pages/colorPicker', 'Pages::colorPicker');
-$routes->get('/pages/drawingPaint', 'Pages::drawingPaint');
-$routes->get('/pages/housePaint', 'Pages::housePaint');
 $routes->get('/pages/kontakKami', 'Pages::kontakKami');
+$routes->get('/pages/addPesan', 'Pages::addPesan');
+$routes->post('/pages/addPesan', 'Pages::addPesan');
 $routes->get('/pages/priceChecker', 'Pages::priceChecker');
 $routes->get('/pages/guideline', 'Pages::guideline');
 $routes->get('/pages/profil', 'Pages::profil');
 $routes->get('/pages/toko', 'Pages::toko');
-$routes->get('/housePaint/(:segment)', 'Pages::detail/$1');
+$routes->get('/housePaint/detail/(:segment)', 'Pages::detail/$1');
 $routes->get('/colorCard/detailWarna/(:segment)', 'Pages::detailWarna/$1');
+$routes->get('/pages/housePaint/(:segment)', 'Pages::housePaint/$1');
+$routes->get('/pages/priceChecker/(:segment)', 'Pages::priceChecker/$1');
+$routes->get('/pages/housePaint/Interior-Exterior-Metalic/(:segment)', 'Pages::housePaint/detail/$1');
+$routes->get('/pages/drawingPaint/(:segment)', 'Pages::drawingPaint/$1');
+
 
 /*
  * --------------------------------------------------------------------

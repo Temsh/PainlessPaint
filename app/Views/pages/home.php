@@ -64,22 +64,53 @@
         </div>
     </div>
 </section>
-<section style="background-color:white">
-    <div class="container-lg  pb-5 pt-5">
+<section style="background-color: white">
+    <div class="container-lg pb-5 pt-5">
         <div class="row text-center">
             <h3><strong>Embrace your imagination with our 300++ color variants</strong></h3>
         </div>
-        <div class="row d-flex justify-content-center text-center pt-3 colorCardHome">
-            <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorRed.png">
-            <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorOrange.png">
-            <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorYellow.png">
-            <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorGreen.png">
-            <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorBlue.png">
-            <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorPurple.png">
-            <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorPink.png">
+        <div class="row justify-content-center text-center pt-3 colorCardHome">
+            <div class="col-md-1 col-sm-4 col-6">
+                <a id="Red" class="d-block">
+                    <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorRed.png" alt="Red Color">
+                </a>
+            </div>
+            <div class="col-md-1 col-sm-4 col-6">
+                <a id="Orange" class="d-block">
+                    <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorOrange.png" alt="Orange Color">
+                </a>
+            </div>
+            <div class="col-md-1 col-sm-4 col-6">
+                <a id="Yellow" class="d-block">
+                    <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorYellow.png" alt="Yellow Color">
+                </a>
+            </div>
+            <div class="col-md-1 col-sm-4 col-6">
+                <a id="Green" class="d-block">
+                    <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorGreen.png" alt="Green Color">
+                </a>
+            </div>
+            <div class="col-md-1 col-sm-4 col-6">
+                <a id="Blue" class="d-block">
+                    <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorBlue.png" alt="Blue Color">
+                </a>
+            </div>
+            <div class="col-md-1 col-sm-4 col-6">
+                <a id="Purple" class="d-block">
+                    <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorPurple.png" alt="Purple Color">
+                </a>
+            </div>
+            <div class="col-md-1 col-sm-4 col-6">
+                <a id="Pink" class="d-block">
+                    <img class="img-fluid" src="<?= base_url() ?>assets/img/home/colorPink.png" alt="Pink Color">
+                </a>
+            </div>
+            <!-- Add more buttons here with the same structure -->
         </div>
     </div>
 </section>
+
+
 <section>
     <div class="container-lg">
         <div class="row d-flex align-items-center">
@@ -114,6 +145,17 @@
         </div>
     </div>
 </section>
+
+<script>
+    const links = document.querySelectorAll('a[id]');
+        links.forEach(link => {
+            link.addEventListener('click', (event) => {
+                const categoryId = link.id;
+                window.location.href = `<?php echo site_url('colorCard/detailWarna/'); ?>${categoryId}`;
+            });
+        });
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <?= $this->endSection(); ?>

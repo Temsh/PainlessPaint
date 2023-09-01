@@ -7,20 +7,17 @@
         <div class="row d-flex justify-content-center">
             <h2 class="text-center">House Paint</h2>
             <?php foreach ($produk as $p) : ?>
-                    <div class="card">
-                        <div class="col"  style="text-align:right">
-                        <button class="btn btnPointer"> <a href="/housePaint/<?= $p['slug']; ?>" class="btnDetail" style="text-align:right">></a></button>
-                        </div>
-                        <img src="/assets/img/produk/<?= $p['produk']; ?>">
-                        <div class="card-body">
+                <div class="card">
+                    <img src="/assets/img/produk/<?= $p['produk']; ?>">
+                    <div class="card-body">
                         <h4 class="mt-2"><?= $p['nama']; ?></h4>
                         <h5><?= $p['kegunaan']; ?> usage</h5>
                         <h6>5 Kg</h6>
                         <h5 style="text-align:right"><strong>Rp.<?= $p['harga']; ?>/Kg</strong></h5>
-                        </div>
                     </div>
-                
+                </div>
             <?php endforeach; ?>
+            
         </div>
     </div>
 </section>

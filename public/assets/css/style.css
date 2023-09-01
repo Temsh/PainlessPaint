@@ -7,9 +7,11 @@
 .navbar a {
   color: black !important;
 }
+
 .navbar-scrolled {
   background-color: #cdeeff;
 }
+
 .navbar-scrolled a {
   color: black !important;
 }
@@ -32,6 +34,7 @@
   display: block;
   margin-top: 0;
 }
+
 .imgLogoNav {
   height: 50px;
   margin-right: 10px;
@@ -93,6 +96,7 @@ p {
 .emailIcon :hover {
   font-size: 150px !important;
 }
+
 .colorCardHome img {
   width: 180px;
   padding-bottom: 10px;
@@ -106,26 +110,32 @@ p {
   border: 3px ridge black;
   margin-bottom: 20px;
 }
+
 @media screen and (max-width: 635px) {
   .homeProfil img {
     width: 200px;
   }
+
   .colorCardHome img {
     height: 100px;
     width: 175px;
     padding-bottom: 5px;
   }
+
   .colorCardHome :hover {
     transform: scale(1.1);
   }
+
   .produkHome button {
     width: 200px;
     border: 2px solid black;
   }
+
   .produkHome img {
     width: 200px;
     border: 2px solid black;
   }
+
   .produkHome img:hover {
     transform: scale(1.1);
   }
@@ -207,7 +217,6 @@ h5 {
   padding: 20px 20px 20px 20px;
   margin: 5px 5px 5px 5px;
   width: 300px;
-  height: 430px;
   margin-top: 20px;
   border: 2px solid black;
   background-color: white;
@@ -256,6 +265,7 @@ h5 {
     width: 180px;
   }
 }
+
 .colorCard {
   border: 0px;
   background-color: transparent;
@@ -264,6 +274,7 @@ h5 {
 .colorCard button:hover {
   transform: scale(1.1);
 }
+
 .colorShade {
   width: 80px;
   height: 80px;
@@ -271,6 +282,7 @@ h5 {
   justify-content: center;
   display: flex;
 }
+
 .shadeBtn {
   width: 30px;
   height: 80px;
@@ -280,4 +292,33 @@ h5 {
   padding-right: 0px;
   margin-left: 0px;
   margin-right: 0px;
+}
+
+.priceChecker {
+  max-width: 700px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: rgb(235, 224, 247);
+}
+
+#the-count {
+  float: right;
+  padding: 0.1rem 0 0 0;
+  font-size: 0.875rem;
+}
+
+.red {
+  color: red;
+}
+
+.gradientFont {
+  background: linear-gradient(to right, rgba(255, 0, 0, 0.8), rgba(255, 94, 0, 0.8), rgba(255, 230, 5, 0.8), rgba(111, 255, 1, 0.8), rgba(0, 179, 255, 0.8), rgba(38, 0, 255, 0.8), rgba(255, 0, 242, 0.8));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.gradientBg {
+  background-image: linear-gradient(to right, rgba(242, 159, 159, 0.8), rgba(242, 189, 159, 0.8), rgba(242, 234, 159, 0.8), rgba(195, 242, 159, 0.8), rgba(159, 217, 242, 0.8), rgba(171, 159, 242, 0.8), rgba(242, 159, 238, 0.8));
 }

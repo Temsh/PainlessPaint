@@ -19,7 +19,7 @@
         <img src="<?= base_url() ?>assets/img/template/topBarBg.png" class="fixed-top" alt="Logo IWAPI">
     </section>
     <section>
-        <nav class="navbar navbar-expand-lg fixed-top pr-2 mt-3" id="navbar">
+        <nav class="navbar navbar-expand-lg fixed-top pr-2 mt-3">
             <div class="container">
                 <img src="<?= base_url() ?>assets/img/template/ppLogo.png" class="imgLogoNav" alt="Logo IWAPI">
                 <a class="navbar-brand" href="#">PainlessPaint</a>
@@ -34,11 +34,11 @@
                                 Produk
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a id ="house" class="dropdown-item" href="/pages/housePaint">House Paint</a></li>
+                                <li><a id ="HousePaint" class="dropdown-item" href="<?php echo site_url('/pages/housePaint/Interior-Exterior-Metalic'); ?>">House Paint</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a id ="drawing" class="dropdown-item" href="/pages/drawingPaint">Drawing Paint</a></li>
+                                <li><a id ="DrawingPaint" class="dropdown-item" href="<?php echo site_url('/pages/drawingPaint/Oil_based-WaterColor'); ?>">Drawing Paint</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -195,11 +195,11 @@
         }
 
         //IDSelector
-        const buttons = document.querySelectorAll('button[id]');
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                const categoryId = button.id;
-                window.location.href = `<?php echo site_url('/pages/housePaint'); ?>${categoryId}`;
+        const links = document.querySelectorAll('a[id]');
+        links.forEach(link => {
+            link.addEventListener('click', (event) => {
+                const categoryId = link.id;
+                sessionStorage.setItem('selectedCategory', categoryId);
             });
         });
     </script>
