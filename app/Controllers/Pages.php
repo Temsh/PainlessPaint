@@ -6,6 +6,7 @@ use App\Models\ProdukModel;
 use App\Models\ShadeModel;
 use App\Models\WarnaModel;
 use App\Models\KontakModel;
+use App\Models\CatModel;
 
 class Pages extends BaseController
 {
@@ -13,12 +14,14 @@ class Pages extends BaseController
     protected $warnaModel;
     protected $shadeModel;
     protected $kontakModel;
+    protected $catModel;
     public function __construct()
     {
         $this->produkModel = new ProdukModel();
         $this->warnaModel = new WarnaModel();
         $this->shadeModel = new ShadeModel();
         $this->kontakModel = new KontakModel();
+        $this->catModel = new CatModel();
     }
     public function index()
     {
@@ -97,26 +100,18 @@ class Pages extends BaseController
     }
     public function priceChecker()
     {
-        //colorcard
-        $data = [
-            'title' =>  'House Paint | PainlessPaint',
-        ];
-
-        return view('pages/priceChecker', $data);
-    }
-    public function displayOptionMenu($categoryId)
-    {
-        $categoryId = explode('-', $categoryId);
-
-        $produk = $this->produkModel->getProductsByCategories($categoryId);
-
+        $inCat= $this->catModel->where('kegunaan', 'Interior')->findAll();
+        $eksCat= $this->catModel->where('kegunaan', 'Exterior')->findAll();       
+        $metalCat= $this->catModel->where('kegunaan', 'Metalic')->findAll();
 
         $data = [
-            'title' =>  'House Paint | PainlessPaint',
-            'produk' => $produk
+            'title' =>  'Price Checker | PainlessPaint',
+            'inCat' => $inCat,
+            'eksCat' => $eksCat,
+            'metalCat' => $metalCat
         ];
 
-        return view('pages/priceChecker', $data);
+        return view('/pages/priceChecker', $data);
     }
     public function profil()
     {

@@ -16,10 +16,11 @@
 
 <body style="background-image:url(<?= base_url('assets/img/template/bodyBg.png') ?>);">
     <section>
-        <img src="<?= base_url() ?>assets/img/template/topBarBg.png" class="fixed-top" alt="Logo IWAPI">
+        <img src="<?= base_url() ?>assets/img/template/topBarBg.png" class="fixed-top img-fluid" alt="Logo IWAPI" style="width: 100%; height: auto;">
     </section>
+
     <section>
-        <nav class="navbar navbar-expand-lg fixed-top pr-2 mt-3">
+        <nav id="navbar" class="navbar navbar-expand-lg fixed-top pr-2 mt-3">
             <div class="container">
                 <img src="<?= base_url() ?>assets/img/template/ppLogo.png" class="imgLogoNav" alt="Logo IWAPI">
                 <a class="navbar-brand" href="#">PainlessPaint</a>
@@ -34,11 +35,11 @@
                                 Produk
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a id ="HousePaint" class="dropdown-item" href="<?php echo site_url('/pages/housePaint/Interior-Exterior-Metalic'); ?>">House Paint</a></li>
+                                <li><a id="HousePaint" class="dropdown-item" href="<?php echo site_url('/pages/housePaint/Interior-Exterior-Metalic'); ?>">House Paint</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a id ="DrawingPaint" class="dropdown-item" href="<?php echo site_url('/pages/drawingPaint/Oil_based-WaterColor'); ?>">Drawing Paint</a></li>
+                                <li><a id="DrawingPaint" class="dropdown-item" href="<?php echo site_url('/pages/drawingPaint/Oil_based-WaterColor'); ?>">Drawing Paint</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -175,31 +176,35 @@
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script>
-        const navEl = document.querySelector('.navbar');
+        document.addEventListener('DOMContentLoaded', function() {
+            const navEl = document.querySelector('#navbar');
+            const scrollThreshold = 56; // Sesuaikan nilai ini jika diperlukan
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY >= 56) {
-                navEl.classList.add('navbar-scrolled');
-            } else if (window.scrollY < 56) {
-                navEl.classList.remove('navbar-scrolled');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY >= scrollThreshold) {
+                    navEl.classList.add('navbar-scrolled');
+                } else {
+                    navEl.classList.remove('navbar-scrolled');
+                }
+            });
+
+            // Function to toggle additional classes (if needed)
+            function changeColor() {
+                const navAll = document.getElementById("navbar");
+                if (navAll.classList.contains("navbar-mini")) {
+                    navAll.classList.remove("navbar-mini");
+                } else {
+                    navAll.classList.add("navbar-mini");
+                }
             }
-        });
 
-        function changeColor() {
-            const navAll = document.getElementById("navbar");
-            if (navAll.classList.contains("navbar-mini")) {
-                navAll.classList.remove("navbar-mini");
-            } else {
-                navAll.classList.add("navbar-mini");
-            }
-        }
-
-        //IDSelector
-        const links = document.querySelectorAll('a[id]');
-        links.forEach(link => {
-            link.addEventListener('click', (event) => {
-                const categoryId = link.id;
-                sessionStorage.setItem('selectedCategory', categoryId);
+            // IDSelector
+            const links = document.querySelectorAll('a[id]');
+            links.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    const categoryId = link.id;
+                    sessionStorage.setItem('selectedCategory', categoryId);
+                });
             });
         });
     </script>

@@ -43,7 +43,7 @@ $routes->get('/pages/toko', 'Pages::toko');
 $routes->get('/housePaint/detail/(:segment)', 'Pages::detail/$1');
 $routes->get('/colorCard/detailWarna/(:segment)', 'Pages::detailWarna/$1');
 $routes->get('/pages/housePaint/(:segment)', 'Pages::housePaint/$1');
-$routes->get('/pages/priceChecker/(:segment)', 'Pages::priceChecker/$1');
+$routes->get('/pages/priceChecker/(:segment)', 'Pages::displayOptionMenu/$1');
 $routes->get('/pages/housePaint/Interior-Exterior-Metalic/(:segment)', 'Pages::housePaint/detail/$1');
 $routes->get('/pages/drawingPaint/(:segment)', 'Pages::drawingPaint/$1');
 
